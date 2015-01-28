@@ -3,4 +3,4 @@
 # append with 'cat rc.conf.add >> /etc/rc.conf'
 nginx_enable="YES"
 uwsgi_enable="YES"
-uwsgi_flags="--uid www ---gid www -s /var/run/moinmoin.sock --wsgi-file /usr/local/www/wiki/moin.wsgi"
+uwsgi_flags="--uid www ---gid www --wsgi-file /usr/local/www/wiki/moin.wsgi"
