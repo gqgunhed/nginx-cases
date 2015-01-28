@@ -1,0 +1,20 @@
+62c62
+<     #url_prefix_static = '/mywiki' + url_prefix_static
+---
+>     url_prefix_static = '/YourWikiUrl' + url_prefix_static
+78c78
+<     #page_front_page = u"MyStartingPage"
+---
+>     page_front_page = u"StartSeite"
+94c94
+<     #superuser = [u"YourName", ]
+---
+>     superuser = [u"YourUserName", ]
+99c99
+<     #acl_rights_before = u"YourName:read,write,delete,revert,admin"
+---
+>     acl_rights_before = u"YourUserName:read,write,delete,revert,admin"
+152c152
+<     language_default = 'en'
+---
+>     language_default = 'de'
