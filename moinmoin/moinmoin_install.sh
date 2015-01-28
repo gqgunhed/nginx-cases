@@ -35,3 +35,9 @@ chown -R ${CGIUSER}:${CGIGROUP} ${MOINDEST}
 
 # Note: export might not work with your shell, use
 # setenv VAR 'value' instead
+
+### my modifications here
+# create socket for uwsgi usage
+export USOCKDIR="/var/run/uwsgi"
+mkdir -p ${USOCKDIR}
+chown -R ${CGIUSER}:${CGIGROUP} ${USOCKDIR}
