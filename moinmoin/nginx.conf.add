@@ -1,5 +1,11 @@
         
+        #----- MoinMoin Wiki section -----
         # snippet to add to /usr/local/etc/nginx/nginx.conf
+        # activate this block if you want to redirect a browser
+        # to your "/wiki/" if it hits _exactly_ the "/" url.
+        #location = / {
+        #    return 301 /wiki/;
+        #}
         location /wiki/ {
             include uwsgi_params;
             uwsgi_param SCRIPT_NAME /wiki;
@@ -11,3 +17,4 @@
             # "find_moin_htdocs.sh"
             alias /usr/local/lib/python2.7/site-packages/MoinMoin/web/static/htdocs;
         }
+        #END-- MoinMoin Wiki section -----
