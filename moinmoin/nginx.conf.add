@@ -1,0 +1,13 @@
+        
+        # snippet to add to /usr/local/etc/nginx/nginx.conf
+        location /wiki/ {
+            include uwsgi_params;
+            uwsgi_param SCRIPT_NAME /wiki;
+            uwsgi_pass unix:///tmp/uwsgi.sock;
+            uwsgi_modifier1 30;
+        }
+        location /moin_static197/ {
+            # exact location can be obtained by running
+            # "find_moin_htdocs.sh"
+            alias /usr/local/lib/python2.7/site-packages/MoinMoin/web/static/htdocs;
+        }
