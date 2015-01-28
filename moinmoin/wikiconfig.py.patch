@@ -1,7 +1,7 @@
 62c62
 <     #url_prefix_static = '/mywiki' + url_prefix_static
 ---
->     url_prefix_static = '/YourWikiUrl' + url_prefix_static
+>     url_prefix_static = '/wiki' + url_prefix_static
 78c78
 <     #page_front_page = u"MyStartingPage"
 ---
