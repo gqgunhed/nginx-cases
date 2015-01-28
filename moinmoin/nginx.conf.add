@@ -15,6 +15,7 @@
         location /moin_static197/ {
             # exact location can be obtained by running
             # "find_moin_htdocs.sh"
-            alias /usr/local/lib/python2.7/site-packages/MoinMoin/web/static/htdocs;
+            # IMPORTANT: the trailing "/"
+            alias /usr/local/lib/python2.7/site-packages/MoinMoin/web/static/htdocs/;
         }
         #END-- MoinMoin Wiki section -----
