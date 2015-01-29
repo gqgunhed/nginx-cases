@@ -1,5 +1,8 @@
 # Moinmoin Wiki
-This is based on the official documentation at https://moinmo.in/HowTo/UbuntuQuick#Nginx_Installation, but for FreeBSD 10.1-RELEASE. The wiki will be placed into /usr/local/www/wiki and served through nginx at http://webserver/wiki/. Static content will be served directly through nginx, not through moinmoin wiki itself.
+
+I really like MoinMoin Wiki (https://moinmo.in/) because it stores all pages/content within a subdirectory structure and not in a database. That makes it easy to maintain and move. And it is written in Python ;-)
+
+This guide is based on the official documentation at https://moinmo.in/HowTo/UbuntuQuick#Nginx_Installation, but for FreeBSD 10.1-RELEASE. The wiki will be placed into /usr/local/www/wiki and served through nginx at http://webserver/wiki/. Static content will be served directly through nginx, not through moinmoin wiki itself.
 
 Please check all scripts and patch files before running/applying them to your environment.
 
