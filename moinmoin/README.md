@@ -42,6 +42,7 @@ Change to your likings, but the following lines are important:
 So you should end up with a wikiconfig.py containing those new active lines:
 
     url_prefix_static = '/wiki' + url_prefix_static
+    sitename = u'My private Wiki'
     page_front_page = u"StartSeite"
     superuser = [u"YourUserName", ]
     acl_rights_before = u"YourUserName:read,write,delete,revert,admin"
