@@ -2,6 +2,10 @@
 <     #url_prefix_static = '/mywiki' + url_prefix_static
 ---
 >     url_prefix_static = '/wiki' + url_prefix_static
+68c68
+<     sitename = u'Untitled Wiki'
+---
+>     sitename = u'TEST Wiki'
 78c78
 <     #page_front_page = u"MyStartingPage"
 ---
