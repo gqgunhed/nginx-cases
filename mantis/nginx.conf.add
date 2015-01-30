@@ -1,0 +1,17 @@
+
+        # Mantis Bug Tracker
+        location /mantis/ {
+            alias /usr/local/www/mantis/;
+            index index.php;
+        }
+        # this block must appear BEFORE the "location ~ \.php$" directive
+        # otherwise the other rule hits first and this block will not
+        # be reached!
+        location ~ /mantis/.*\.php$ {
+            try_files $uri =404;
+            root /usr/local/www/;
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            include        fastcgi_params;
+        }
