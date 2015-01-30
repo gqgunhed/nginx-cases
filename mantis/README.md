@@ -18,3 +18,12 @@ I prefer MantisBT because it is easy to maintain and covers all my needs.
 If the above commands ran succesfully and you can browse your MantisBT, 
 it is time to make these changes permanent. Add rc.conf.add to your 
 /etc/rc.conf to activate your nginx webserver and the php-fpm socket at boot time.
+
+
+
+#Additional helper functions
+
+### diffs
+
+    diff /usr/local/etc/php-fpm.conf.default /usr/local/etc/php-fpm.conf
+    diff /usr/local/etc/php.ini-production /usr/local/etc/php.ini
