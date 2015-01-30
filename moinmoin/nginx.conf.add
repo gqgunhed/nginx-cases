@@ -19,6 +19,6 @@
             alias /usr/local/lib/python2.7/site-packages/MoinMoin/web/static/htdocs/;
             access_log off;
             # cache static content for 5 days within nginx
-            expire 5d;
+            expires 5d;
         }
         #END-- MoinMoin Wiki section -----
