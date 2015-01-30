@@ -1,0 +1,4 @@
+180c180
+< ;listen.allowed_clients = 127.0.0.1
+---
+> listen.allowed_clients = 127.0.0.1
