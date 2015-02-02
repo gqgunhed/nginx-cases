@@ -1,17 +1,35 @@
 
-        # Mantis Bug Tracker
+        #----- MantisBT -----
+        # snippet to add to /usr/local/etc/nginx/nginx.conf
+        # activate this block if you want to redirect a browser
+        # to your "/wiki/" if it hits _exactly_ the "/" url.
+        #location = / {
+        # return 301 /mantis/;
+        #}
         location /mantis/ {
             alias /usr/local/www/mantis/;
-            index index.php;
+            # the following two locations (images|javascript) make nginx to
+            # - cache static content
+            # - disable logging for static content
+            # TODO: should be regex-combined into one location
+            location /mantis/images/ {
+                alias /usr/local/www/mantis/images/;
+                access_log off;
+                expires 5d;
+            }
+            location /mantis/javascript/ {
+                alias /usr/local/www/mantis/javascript/;
+                access_log off;
+                expires 5d;
+            }
+            location ~ /mantis/.*\.php$ {
+                root /usr/local/www/;
+                try_files $uri =404;
+                include fastcgi_params;
+                fastcgi_pass 127.0.0.1:9000;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            }
         }
-        # this block must appear BEFORE the "location ~ \.php$" directive
-        # otherwise the other rule hits first and this block will not
-        # be reached!
-        location ~ /mantis/.*\.php$ {
-            try_files $uri =404;
-            root /usr/local/www/;
-            fastcgi_pass   127.0.0.1:9000;
-            fastcgi_index  index.php;
-            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-            include        fastcgi_params;
-        }
+        #END-- MantisBT -----
+
