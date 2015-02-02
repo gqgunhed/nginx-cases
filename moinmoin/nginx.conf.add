@@ -11,14 +11,15 @@
             uwsgi_param SCRIPT_NAME /wiki;
             uwsgi_pass unix:///tmp/uwsgi.sock;
             uwsgi_modifier1 30;
-        }
-        location /moin_static197/ {
-            # exact location can be obtained by running
-            # "find_moin_htdocs.sh"
-            # IMPORTANT: the trailing "/"
-            alias /usr/local/lib/python2.7/site-packages/MoinMoin/web/static/htdocs/;
-            access_log off;
-            # cache static content for 5 days within nginx
-            expires 5d;
+            location /moin_static197/ {
+                # exact location for alias can be obtained by running
+                # "find_moin_htdocs.sh"
+                # IMPORTANT: the trailing "/"
+                alias /usr/local/lib/python2.7/site-packages/MoinMoin/web/static/htdocs/;
+                # do not log access to static content (optional)
+                access_log off;
+                # cache static content for 5 days within nginx
+                expires 5d;
+            }
         }
         #END-- MoinMoin Wiki section -----
