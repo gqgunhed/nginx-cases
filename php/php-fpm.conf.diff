@@ -2,7 +2,7 @@
 < listen = 127.0.0.1:9000
 ---
 > ;listen = 127.0.0.1:9000
-> listen = /tmp/php-fpm.sock
+> listen = /var/run/php-fpm.sock
 170,172c171,173
 < ;listen.owner = www
 < ;listen.group = www
