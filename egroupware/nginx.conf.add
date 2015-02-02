@@ -1,0 +1,33 @@
+
+        #----- eGroupware -----
+        location /eg/ {
+            alias /usr/local/www/eg/;
+            location ~ ^(/eg/.+\.php)(.*)$ {
+                root /usr/local/www/;
+                include fastcgi_params;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_pass 127.0.0.1:9000;
+                # without this split_path CalDAV (calendar/contacts) will NOT WORK
+                # tested with thunderbird 34, DAVDroid 0.6.11
+                # found on CalDAV forums
+                fastcgi_split_path_info ^(.+\.php)(.*)$;
+                fastcgi_param PATH_INFO $fastcgi_path_info;
+                fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
+                # buffer tuning from CalDAV forums
+                fastcgi_read_timeout 180;
+                fastcgi_buffers 4 256k;
+                fastcgi_buffer_size 128k;
+	        location /eg/phpgwapi/ {
+	            # activate caching of static files
+		        expires 5d;
+    	        }
+            }
+        }
+        location /egdata/ {
+            # maybe it's called "eg-data"?
+            # I am not sure about use of this directory
+            # had it in my old config
+            # TODO: check need for this location
+            alias /usr/local/www/egdata/;
+        }
+
