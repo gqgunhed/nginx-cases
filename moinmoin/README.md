@@ -54,8 +54,8 @@ Add nginx.conf.add into your /usr/local/etc/nginx/nginx.conf with your favorite 
 
 ## Start the services
 
-    /usr/local/etc/rc.d/uwsgi start
-    /usr/local/etc/rc.d/nginx start
+    /usr/local/etc/rc.d/uwsgi onestart
+    /usr/local/etc/rc.d/nginx onestart
     
 Try to browse http://webserver/wiki/ to access your brand new MoinMoin wiki.
 
