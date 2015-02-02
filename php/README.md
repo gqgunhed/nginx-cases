@@ -30,9 +30,9 @@ you should see some entries for your php-fpm processes like:
     root@fbsd: # sockstat -l
     USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS      
     www      nginx      1591  6  tcp4   *:80                  *:*
-    www      php-fpm    1525  0  stream /tmp/php-fpm.sock
-    www      php-fpm    1524  0  stream /tmp/php-fpm.sock
-    root     php-fpm    1523  7  stream /tmp/php-fpm.sock
+    www      php-fpm    1525  0  stream /var/run/php-fpm.sock
+    www      php-fpm    1524  0  stream /var/run/php-fpm.sock
+    root     php-fpm    1523  7  stream /var/run/php-fpm.sock
 
 Or run
      
