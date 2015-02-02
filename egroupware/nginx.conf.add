@@ -1,5 +1,9 @@
 
-        #----- eGroupware -----
+        #----- eGroupware ----
+        # redirect all requests to _exactly_ "/" to the egroupware
+        location = / {
+            return 301 /eg/index.php;
+        }
         location /eg/ {
             alias /usr/local/www/eg/;
             location ~ ^(/eg/.+\.php)(.*)$ {
