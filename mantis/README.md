@@ -14,8 +14,8 @@ It does not cover (atm) setting up mysql-server or the MantisBT itself in-depth,
 
 ##Start the services
 
-    /usr/local/etc/rc.d php-fpm start
-    /usr/local/etc/rc.d nginx start
+    /usr/local/etc/rc.d php-fpm onestart
+    /usr/local/etc/rc.d nginx onestart
     
 ##Modify rc.conf
 
