@@ -1,0 +1,5 @@
+
+# nginx settings for MantisBT with php-fpm
+# append with 'cat rc.conf.add >> /etc/rc.conf'
+nginx_enable="YES"
+php_fpm_enable="YES"
