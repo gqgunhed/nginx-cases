@@ -3,5 +3,6 @@
 # path to stdout
 #
 # "pkg query %Fp [name]" returns list of files within an installed package
+# "pkg info -l [name]" too ;-)
 # 
-dirname `pkg query %Fp moinmoin | grep "htdocs/index.html"`
+dirname `pkg info -l moinmoin | grep "htdocs/index.html"`
