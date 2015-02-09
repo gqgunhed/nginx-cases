@@ -1,4 +1,4 @@
-#Mantis Bug Tracker
+#Mantis Bug Tracker (unfinished)
 I prefer MantisBT (official site: http://www.mantisbt.org/) because it is easy to maintain and covers all my needs.
 This guide covers instructions how to set up nginx and PHP-fpm to serve a Mantis Bug Tracker. 
 It does not cover (atm) setting up mysql-server or the MantisBT itself in-depth, as this repo is focused on the nginx webserver and the other web-components.
