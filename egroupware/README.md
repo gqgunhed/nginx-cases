@@ -1,4 +1,4 @@
-#EGroupware
+#EGroupware (unfinished)
 eGroupware is a integrated suite of web-based applications like calendar, contacts, 
 project mangement and a whole lot of modules more. See the official site at http://www.egroupware.org/ for more
 information. Is use it as a central contacts and calendar repository (and sync it to my Android devices) 
@@ -16,8 +16,16 @@ Follow the web-based installer to customize your EGroupware installation.
 
 ##Modify nginx.conf
 
-Add nginx.conf.add into your /usr/local/etc/nginx/nginx.conf with your favorite editor. 
+Add nginx.egroupware.conf into your /usr/local/etc/nginx/nginx.conf with your favorite editor or just include it. 
 It goes directly into one "server" block.
+
+    http {
+        server {
+            listen 80;
+            server_name localhost;
+            include nginx.egroupware.conf;
+        }
+    }
 
 ##Start the services
 
