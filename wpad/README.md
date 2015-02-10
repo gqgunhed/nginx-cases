@@ -1,7 +1,9 @@
 #WPAD configuration
 WPAD is a hostname used by brosers/operating systems to get information about the proxy settings for this network.
 
-If you set your browsers proxy settings to "determine automatically" it will send a request for "/wpad.dat" to a webserver called "wpad". The returned JavaScript file sets the proxy variables within the browser.
+If you set your browser's proxy settings to "determine automatically" it will send a request for "/wpad.dat" to a webserver called "wpad". The returned JavaScript file sets the proxy variables within the browser.
+
+You can set your browser's proxy autoconfiguration url manually, but we will use a setup that does not involve modifications of any client browser settings.
 
 ##Pre-requisites
 You need a DNS-entry resolving "wpad" to your nginx-webserver, either via a DNS-server or an entry in your /etc/hosts.
