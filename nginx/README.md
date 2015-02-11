@@ -37,7 +37,7 @@ You can either copy & paste the content of the various nginx.[app].conf into you
             
         }
         
-        # include files with own server section go here:
+        # include files with own server section here:
         include /path/to/wpad/nginx.wpad.conf;
     }
     
