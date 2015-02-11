@@ -1,6 +1,9 @@
 #Helpful Urls
 some hyperlinks to documents:
 
+##log rotation
+http://www.nginxtips.com/how-to-rotate-nginx-logs/
+http://wiki.nginx.org/LogRotation
 
 ##rewrite
 * http://stackoverflow.com/questions/11623267/nginx-rewrite-all-to-index-php-except-whitelist
